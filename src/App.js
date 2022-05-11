@@ -10,18 +10,18 @@ import {
   getInTouch,
   experiences
 } from "./editable-stuff/config.js";
-import MainBody from "./components/MainBody";
-import AboutMe from "./components/AboutMe";
-import Project from "./components/Project";
+import MainBody from "./components/home/MainBody";
+import AboutMe from "./components/home/AboutMe";
+import Project from "./components/home/Project";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import Skills from "./components/Skills";
+import Skills from "./components/home/Skills";
 // import { Blog } from "./components/blog/Blog";
 // import BlogPost from "./components/blog/BlogPost";
-import GetInTouch from "./components/GetInTouch.jsx";
-import Leadership from "./components/Leadership.jsx";
+import GetInTouch from "./components/home/GetInTouch.jsx";
+import Leadership from "./components/home/Leadership.jsx";
 
-import Experience from "./components/Experience";
+import Experience from "./components/home/Experience";
 
 const Home = React.forwardRef((props, ref) => {
   return (
