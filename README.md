@@ -48,8 +48,9 @@ Project is open source. Feel free to make your own version. All you need to do i
 
 You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/) installed on your PC. You should also own a GitHub account.
 
-## OLD Setup And Deployment 🔧 OLD
+## Setup And Deployment 🔧
 
+0. Now we can launch the project with 'docker-compose up -d' command
 1. To Get Started, Fork this repository to your GitHub account:
 2. Clone the forked repo from your account using:
 
