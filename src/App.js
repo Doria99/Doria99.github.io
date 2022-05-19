@@ -16,12 +16,34 @@ import Project from "./components/home/Project";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Skills from "./components/home/Skills";
-// import { Blog } from "./components/blog/Blog"; 
+// import { Blog } from "./components/blog/Blog";
 // import BlogPost from "./components/blog/BlogPost";
 import GetInTouch from "./components/home/GetInTouch.jsx";
 import Leadership from "./components/home/Leadership.jsx";
 
 import Experience from "./components/home/Experience";
+
+import { WalletLinkConnector } from "@web3-react/walletlink-connector";
+import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
+import { InjectedConnector } from "@web3-react/injected-connector";
+
+import { useWeb3React } from '@web3-react/core'
+
+const CoinbaseWallet = new WalletLinkConnector({
+ url: `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`,
+ appName: "Web3-react Demo",
+ supportedChainIds: [1, 3, 4, 5, 42],
+});
+
+const WalletConnect = new WalletConnectConnector({
+ rpcUrl: `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`,
+ bridge: "https://bridge.walletconnect.org",
+ qrcode: true,
+});
+
+const Injected = new InjectedConnector({
+ supportedChainIds: [1, 3, 4, 5, 42]
+});
 
 const Home = React.forwardRef((props, ref) => {
   return (
@@ -77,6 +99,7 @@ const Home = React.forwardRef((props, ref) => {
 
 const App = () => {
   const titleRef = React.useRef();
+  const { activate, deactivate } = useWeb3React();
 
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL + "/"}>

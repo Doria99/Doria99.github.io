@@ -66,6 +66,14 @@ const Navigation = React.forwardRef((props, ref) => {
           >
             Resume
           </Nav.Link>
+
+          <Nav.Link
+            className="nav-link lead"
+            onClick={onOpen}
+          >
+          Connect Wallet
+          </Nav.Link>
+
           {about.show && (
             <Nav.Link
               className="nav-link lead"

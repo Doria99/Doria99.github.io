@@ -22,5 +22,12 @@ COPY package.json ./
 COPY package-lock.json ./
 RUN npm install
 RUN npm install react-scripts@3.4.1 -g
+RUN npm install @ethersproject/providers
+RUN npm install --save ethers
+RUN npm install web3
+RUN npm install @web3-react/core
+RUN npm install @web3-react/walletlink-connector # Coinbase Wallet
+RUN npm install @web3-react/walletconnect-connector # Wallet Connect
+RUN npm install @web3-react/injected-connector # Injected (e.g. Metamask)
 COPY . ./
 CMD ["npm", "start", "python3"]
